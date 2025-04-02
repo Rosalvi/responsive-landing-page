@@ -17,19 +17,25 @@
   font-size: 1.2rem;
   color: #94959a;
   text-align: center;
-  margin-bottom: 2rem;
+  margin-bottom: 5rem;
 }
-.features-list {
+.nav-features {
   display: flex;
-  flex-wrap: wrap;
+  list-style:none;
   justify-content: center;
-  gap: 2rem;
+  color: #94959a;
+  border-bottom: #94959a 1px solid;
+  padding-bottom: 1rem;
 }
-.features-list .feature-item {
-  background-color: #f9f9f9;
-  border-radius: 10px;
-  padding: 1.5rem;
-  width: 300px;
-  text-align: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+.nav-features a {
+  color: #94959a;
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 1rem;
+  transition: color 0.3s, border-bottom 0.3s;
+}
+.nav-features a:hover{
+ border-bottom:  #fb575b 3px solid;
+ color: black;
+ padding: 1rem
 }
