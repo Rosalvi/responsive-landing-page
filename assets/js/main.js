@@ -5,8 +5,7 @@ function loadComponent(containerId, filePath, callback) {
                 throw new Error(`Error loading ${filePath}: ${response.statusText}`);
             }
             return response.text();
-        }
-        )
+        })
         .then(html => {
             document.getElementById(containerId).innerHTML = html;
             if (callback) {
@@ -32,12 +31,5 @@ document.addEventListener("DOMContentLoaded", () => {
         } else {
             console.error("Menu button or nav container not found.");
         }
-
     }
-    
-    menuBtn.addEventListener("click", function () {
-        navContainer.classList.toggle("active");
-    });
-
-
 });
