@@ -58,10 +58,6 @@
     &.active {
       .nav-links {
         display: flex !important;
-        .li {
-            width:100%
-        }
-        
       }
 
       .hamburger-menu {
@@ -145,7 +141,25 @@
 
   .features-container {
     p {
-        padding :0%
+        padding :0%;
     }
+
+    .nav-features {
+        flex-direction:column;
+        position: relative;
+        padding-bottom: 0;
+
+        a {
+      border-top: $text-color-light 1px solid;
+      text-align: center;
+      display: block;
+      width: 80vw;
+      padding: 1rem;
+      font-weight:500;
+     
+        }
   }
 } 
+
+
+}
