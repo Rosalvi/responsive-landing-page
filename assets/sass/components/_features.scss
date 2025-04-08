@@ -5,7 +5,15 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 2rem;
+  
+  initial-contet {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 2rem 1rem 2rem;
+  }
 
   .initial-content h2 {
     font-size: 2.5rem;
@@ -27,22 +35,94 @@
     display: flex;
     list-style: none;
     justify-content: center;
-    color: $text-color-light;
     border-bottom: $text-color-light 1px solid;
-    padding-bottom: 1rem;
-
-    a {
+    padding-bottom: 0;
+  
+    .feature-tab {
+      background: none;
+      border: none;
+      font: inherit;
       color: $text-color-light;
       text-decoration: none;
       font-size: 1rem;
       padding: 1rem;
+      cursor: pointer;
       transition: color 0.3s, border-bottom 0.3s;
-
+  
       &:hover {
         border-bottom: $secondary-color 3px solid;
         color: $black;
-        padding: 1rem;
+      }
+  
+      &.active {
+        border-bottom: $secondary-color 3px solid;
+        color: $black;
       }
     }
   }
+  .feature-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
+    .feature {
+      display: none;
+  
+      &.active {
+        display: flex;
+      }
+  
+      align-items: center;
+      justify-content: space-between;
+      padding: 3rem 10%;
+      gap: 3rem;
+  
+      .feature-image {
+        width: 50%;
+        position: relative;
+  
+        img {
+          width: 100%;
+          max-width: 500px;
+          border-radius: 20px;
+        }
+  
+        &::before {
+          content: '';
+          position: absolute;
+          top: 30%;
+          right: 40%; 
+          width: 120%;
+          height: 320px;
+          background-color: $primary-color;
+          border-radius: 0 150px 150px 0; 
+          z-index: -1;
+        }
+      }
+  
+      .feature-text {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+  
+        h3 {
+          font-size: 2rem;
+          color: $text-color-dark;
+        }
+  
+        p {
+          font-size: 1.2rem;
+          color: $text-color-light;
+        }
+  
+        button {
+          width: fit-content;
+        }
+      }
+    }
+  }
+  
+
 }
