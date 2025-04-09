@@ -1,53 +1,27 @@
-<section class="features-container">
-    <div class="initial-content">
-      <h2>Features</h2>
-      <p>Our aim is to make it quick and easy for you to access your favourite websites.
-         Your bookmarks sync between your devices so you can access them on the go.</p>
-    </div>
-    <div class="features">
-        <nav>
-            <ul class="nav-features">
-                <li><button class="feature-tab active">Simple Bookmarking</button></li>
-                <li><button class="feature-tab">Speedy Searching</button></li>
-                <li><button class="feature-tab">Easy Sharing</button></li>
-              </ul>
-        </nav>
-    </div>
-    <div class="feature-content">
-        <div class="feature active" id="feature-bookmarking">
-          <div class="feature-image">
-            <img src="assets/img/illustration-features-tab-1.svg" alt="Simple Bookmarking">
-          </div>
-          <div class="feature-text">
-            <h3>Bookmark in one click</h3>
-            <p>Organize your bookmarks however you like. Our simple drag-and-drop interface gives you complete control over how you manage your favourite sites.</p>
-            <button class="option-btn-blue">More Info</button>
-          </div>
-        </div>
-      
-        <div class="feature" id="feature-searching">
-          <div class="feature-image">
-            <img src="assets/img/illustration-features-tab-2.svg" alt="Speedy Searching">
-          </div>
-          <div class="feature-text">
-            <h3>Intelligent Search</h3>
-            <p>Our powerful search feature will help you find saved sites in no time at all. No need to crawl through all of your bookmarks.</p>
-            <button class="option-btn-blue">More Info</button>
-          </div>
-        </div>
-      
-        <div class="feature" id="feature-sharing">
-          <div class="feature-image">
-            <img src="assets/img/illustration-features-tab-3.svg" alt="Easy Sharing">
-          </div>
-          <div class="feature-text">
-            <h3>Share your bookmarks</h3>
-            <p>Easily share your bookmarks and collections with others. Create a shareable link that you can send at the click of a button.</p>
-            <button class="option-btn-blue">More Info</button>
-          </div>
-        </div>
+<section class="features-container w-full px-5 py-12 bg-white">
+  <div class="text-center max-w-2xl mx-auto mb-10">
+    <h2 class="text-[2.2rem] font-bold text-[#2a2e4c] mb-4">Features</h2>
+    <p class="text-[#94959a] text-[1.1rem]">Our aim is to make it quick and easy for you to access your favourite websites. Your bookmarks sync between your devices so you can access them on the go.</p>
+  </div>
+
+  <nav class="mb-10">
+    <ul class="flex flex-col md:flex-row justify-center items-center gap-4 md:gap-10 border-b-2 border-gray-300 max-w-3xl mx-auto">
+      <li><button class="feature-tab text-[#2a2e4c] text-lg border-b-4 border-[#fb575b] pb-2">Simple Bookmarking</button></li>
+      <li><button class="feature-tab text-[#94959a] text-lg hover:text-[#fb575b] pb-2">Speedy Searching</button></li>
+      <li><button class="feature-tab text-[#94959a] text-lg hover:text-[#fb575b] pb-2">Easy Sharing</button></li>
+    </ul>
+  </nav>
+
+  <div class="feature-content max-w-6xl mx-auto">
+    <div class="feature active flex flex-col md:flex-row items-center gap-10 mb-16">
+      <div class="feature-image w-full md:w-1/2">
+        <img src="assets/img/illustration-features-tab-1.svg" alt="Simple Bookmarking" class="w-full">
       </div>
-      
+      <div class="feature-text w-full md:w-1/2">
+        <h3 class="text-[1.8rem] font-bold text-[#2a2e4c] mb-4">Bookmark in one click</h3>
+        <p class="text-[#94959a] text-[1.1rem] mb-6">Organize your bookmarks however you like. Our simple drag-and-drop interface gives you complete control over how you manage your favourite sites.</p>
+        <button class="px-6 py-3 bg-[#4d61d3] text-white rounded hover:bg-white hover:text-[#4d61d3] hover:border-2 border-[#4d61d3] transition">More Info</button>
+      </div>
     </div>
-  </section>
-  
+  </div>
+</section>

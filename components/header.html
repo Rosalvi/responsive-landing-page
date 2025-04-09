@@ -1,23 +1,24 @@
-<header>
-    <div class="container">
-
-        <div class="logo">
-            <img src="assets/img/logo-bookmark.svg" alt="Logo de la página">
-        </div>
-        <div class="nav-container">
-            <button class="hamburger-menu" aria-label="Toggle navigation">
-                <span></span>
-                <span></span>
-                <span></span>
+<header class="bg-white text-black w-full px-5 py-4 relative z-50">
+    <div class="container flex justify-between items-center py-6">
+      <div class="logo flex items-center pl-[10%]">
+        <img src="assets/img/logo-bookmark.svg" alt="Logo" class="w-[177.6px] h-[30px] mr-10" />
+      </div>
+      <div class="nav-container flex justify-end items-center pr-[10%] relative">
+        <button class="hamburger-menu md:hidden flex flex-col justify-between w-[30px] h-[25px] cursor-pointer">
+          <span class="h-1 bg-black rounded transition-all"></span>
+          <span class="h-1 bg-black rounded transition-all"></span>
+          <span class="h-1 bg-black rounded transition-all"></span>
+        </button>
+        <ul class="nav-links hidden absolute md:static top-[60px] left-0 w-full bg-white flex-col md:flex md:flex-row gap-5 p-5 md:p-0 rounded-b-[10px] shadow md:shadow-none z-50">
+          <li><a href="#" class="text-black text-[1rem] hover:text-[#ff9800] transition">FEATURES</a></li>
+          <li><a href="#" class="text-black text-[1rem] hover:text-[#ff9800] transition">PRICING</a></li>
+          <li><a href="#" class="text-black text-[1rem] hover:text-[#ff9800] transition">CONTACT</a></li>
+          <li>
+            <button class="login-btn bg-[#fb575b] text-white text-[1rem] font-medium px-5 py-2 shadow-md rounded-md hover:bg-white hover:text-[#fb575b] hover:border-2 border-[#fb575b] transition">
+              LOGIN
             </button>
-            <nav>
-                <ul class="nav-links">
-                    <li href=#><a >FEATURES</a></li>
-                    <li href=#><a >PRICING</a></li>
-                    <li href=#><a >CONTACT</a></li>
-                    <li><button href=# class="login-btn"> LOGIN </button></li>
-                </ul>
-            </nav>
-        </div>
+          </li>
+        </ul>
+      </div>
     </div>
-</header>
+  </header>

@@ -9,7 +9,7 @@ function loadComponent(containerId, filePath, callback) {
         .then(html => {
             document.getElementById(containerId).innerHTML = html;
             if (callback) {
-                callback();
+                setTimeout(callback, 0);
             }
         })
         .catch(error => console.error(`Error cargando ${filePath}:`, error));
@@ -22,16 +22,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function initializeMenu() {
         const menuBtn = document.querySelector(".hamburger-menu");
-        const navContainer = document.querySelector(".nav-container");
-
-        if (menuBtn && navContainer) {
-            menuBtn.addEventListener("click", function () {
-                navContainer.classList.toggle("active");
-            });
+        const navLinks = document.querySelector(".nav-links");
+      
+        if (menuBtn && navLinks) {
+          menuBtn.addEventListener("click", () => {
+            navLinks.classList.toggle("hidden");
+          });
         } else {
-            console.error("Menu button or nav container not found.");
+          console.error("Menu button or nav links not found.");
         }
-    }
+      }
+      
 });
 
 function initializeFeaturesTabs() {
