@@ -21,36 +21,43 @@ document.addEventListener("DOMContentLoaded", () => {
     loadComponent("features-container", "components/features.html", initializeFeaturesTabs);
 
     function initializeMenu() {
-        const menuBtn = document.querySelector(".hamburger-menu");
-        const navLinks = document.querySelector(".nav-links");
+        const menuBtn = document.getElementById("menu-toggle");
+        const mobileMenu = document.getElementById("mobile-menu");
+        const bars = menuBtn.querySelectorAll("span");
       
-        if (menuBtn && navLinks) {
+        if (menuBtn && mobileMenu) {
           menuBtn.addEventListener("click", () => {
-            navLinks.classList.toggle("hidden");
-          });
-        } else {
-          console.error("Menu button or nav links not found.");
+            mobileMenu.classList.toggle("hidden");
+            bars[0].classList.toggle("rotate-45");
+            bars[1].classList.toggle("opacity-0");
+            bars[2].classList.toggle("-rotate-45");
+          });    
         }
       }
       
 });
 
 function initializeFeaturesTabs() {
-    const navItems = document.querySelectorAll('.feature-tab');
-    const features = document.querySelectorAll('.feature');
+const tabs = document.querySelectorAll('.feature-tab');
+const features = document.querySelectorAll('.feature');
 
-    if (navItems.length === 0 || features.length === 0) {
-        console.warn("No se encontraron tabs o secciones de features.");
-        return;
-    }
-
-    navItems.forEach((item, index) => {
-        item.addEventListener('click', () => {
-            navItems.forEach(i => i.classList.remove('active'));
-            item.classList.add('active');
-
-            features.forEach(f => f.classList.remove('active'));
-            features[index].classList.add('active');
-        });
+tabs.forEach((tab, idx) => {
+  tab.addEventListener('click', () => {
+    // Quitar estilos en todos
+    tabs.forEach(btn => {
+      btn.classList.remove('border-[#fb575b]', 'border-b-4', 'text-black');
+      btn.classList.add('border-transparent', 'text-[#94959a]');
     });
-}
+    features.forEach(f => {
+      f.classList.add('hidden');
+      f.classList.remove('flex');
+    });
+
+    // Activar sólo en el tab y feature correspondiente
+    tab.classList.remove('text-[#94959a]', 'border-transparent');
+    tab.classList.add('border-[#fb575b]', 'border-b-4', 'text-black');
+    features[idx].classList.remove('hidden');
+    features[idx].classList.add('flex');
+  });
+});
+  }

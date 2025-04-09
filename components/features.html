@@ -1,26 +1,160 @@
-<section class="features-container w-full px-5 py-12 bg-white">
-  <div class="text-center max-w-2xl mx-auto mb-10">
-    <h2 class="text-[2.2rem] font-bold text-[#2a2e4c] mb-4">Features</h2>
-    <p class="text-[#94959a] text-[1.1rem]">Our aim is to make it quick and easy for you to access your favourite websites. Your bookmarks sync between your devices so you can access them on the go.</p>
+<section class="flex flex-col items-center justify-center" id="features-container">
+  <!-- Contenido inicial (Título y texto) -->
+  <div class="w-full flex flex-col items-center justify-center pt-8 px-8 pb-4">
+    <h2 class="text-[2.5rem] text-[#2a2e4c] mb-4 text-center">
+      Features
+    </h2>
+    <p class="text-[1.2rem] text-[#94959a] text-center mb-[5rem]
+               md:px-[30%] px-4">
+      Our aim is to make it quick and easy for you to access your favourite websites.
+      Your bookmarks sync between your devices so you can access them on the go.
+    </p>
   </div>
 
-  <nav class="mb-10">
-    <ul class="flex flex-col md:flex-row justify-center items-center gap-4 md:gap-10 border-b-2 border-gray-300 max-w-3xl mx-auto">
-      <li><button class="feature-tab text-[#2a2e4c] text-lg border-b-4 border-[#fb575b] pb-2">Simple Bookmarking</button></li>
-      <li><button class="feature-tab text-[#94959a] text-lg hover:text-[#fb575b] pb-2">Speedy Searching</button></li>
-      <li><button class="feature-tab text-[#94959a] text-lg hover:text-[#fb575b] pb-2">Easy Sharing</button></li>
+  <!-- Barra de navegación (tabs) -->
+  <nav class="w-full border-b border-[#94959a]">
+    <ul class="nav-features flex flex-col md:flex-row list-none justify-center items-center">
+      
+      <!-- Tab 1 (por defecto activo) -->
+      <li class="w-[80vw] md:w-auto text-center md:border-none border-t border-[#94959a] first:border-t-0 md:first:border-t-0">
+        <button 
+          class="feature-tab text-base font-inherit py-4 px-4 cursor-pointer
+                 transition-all border-b-[3px] border-[#fb575b] text-black
+                 hover:border-[#fb575b] hover:text-black 
+                 w-full md:w-auto"
+        >
+          Simple Bookmarking
+        </button>
+      </li>
+
+      <!-- Tab 2 -->
+      <li class="w-[80vw] md:w-auto text-center border-t border-[#94959a]">
+        <button 
+          class="feature-tab text-base font-inherit py-4 px-4 cursor-pointer
+                 transition-all border-b-[3px] border-transparent text-[#94959a]
+                 hover:border-[#fb575b] hover:text-black 
+                 w-full md:w-auto"
+        >
+          Speedy Searching
+        </button>
+      </li>
+
+      <!-- Tab 3 -->
+      <li class="w-[80vw] md:w-auto text-center border-t border-[#94959a]">
+        <button 
+          class="feature-tab text-base font-inherit py-4 px-4 cursor-pointer
+                 transition-all border-b-[3px] border-transparent text-[#94959a]
+                 hover:border-[#fb575b] hover:text-black 
+                 w-full md:w-auto"
+        >
+          Easy Sharing
+        </button>
+      </li>
     </ul>
   </nav>
 
-  <div class="feature-content max-w-6xl mx-auto">
-    <div class="feature active flex flex-col md:flex-row items-center gap-10 mb-16">
-      <div class="feature-image w-full md:w-1/2">
-        <img src="assets/img/illustration-features-tab-1.svg" alt="Simple Bookmarking" class="w-full">
+  <!-- Contenedor de Features (las pestañas) -->
+  <div class="w-full flex flex-col items-center">
+
+    <!-- Feature 1 (por defecto visible) -->
+    <div id="feature-bookmarking" class="feature flex items-center justify-between py-12 px-[10%] gap-12 w-full
+                                        md:flex-row flex-col
+                                        relative">
+      <!-- Imagen + "fondo" lateral -->
+      <div class="feature-image w-full md:w-1/2 relative flex justify-center mb-8 md:mb-0">
+        <!-- Elemento extra para emular ::before con Tailwind -->
+        <div class="hidden md:block absolute top-1/3 right-[40%] w-[120%] h-[320px] bg-[#4d61d3] 
+                    rounded-r-[150px] -z-10">
+        </div>
+        <img 
+          src="assets/img/illustration-features-tab-1.svg" 
+          alt="Simple Bookmarking" 
+          class="max-w-[500px] w-full rounded-[20px]"
+        >
       </div>
-      <div class="feature-text w-full md:w-1/2">
-        <h3 class="text-[1.8rem] font-bold text-[#2a2e4c] mb-4">Bookmark in one click</h3>
-        <p class="text-[#94959a] text-[1.1rem] mb-6">Organize your bookmarks however you like. Our simple drag-and-drop interface gives you complete control over how you manage your favourite sites.</p>
-        <button class="px-6 py-3 bg-[#4d61d3] text-white rounded hover:bg-white hover:text-[#4d61d3] hover:border-2 border-[#4d61d3] transition">More Info</button>
+      <!-- Texto y botón -->
+      <div class="feature-text w-full md:w-1/2 flex flex-col gap-4">
+        <h3 class="text-[2rem] text-[#2a2e4c]">Bookmark in one click</h3>
+        <p class="text-[1.2rem] text-[#94959a]">
+          Organize your bookmarks however you like. Our simple drag-and-drop 
+          interface gives you complete control over how you manage your favourite sites.
+        </p>
+        <button 
+          class="inline-block font-medium text-[0.95rem] py-3 px-6 rounded 
+                 cursor-pointer transition-all border-none bg-[#4d61d3] text-white
+                 shadow-[0_8px_16px_rgba(82,103,223,0.2)]
+                 hover:bg-white hover:text-[#4d61d3] 
+                 hover:border-2 hover:border-[#4d61d3]
+                 w-fit"
+        >
+          More Info
+        </button>
+      </div>
+    </div>
+
+    <!-- Feature 2 (por defecto oculto) -->
+    <div id="feature-searching" class="feature hidden items-center justify-between py-12 px-[10%] gap-12 w-full
+                                     md:flex-row flex-col
+                                     relative">
+      <div class="feature-image w-full md:w-1/2 relative flex justify-center mb-8 md:mb-0">
+        <div class="hidden md:block absolute top-1/3 right-[40%] w-[120%] h-[320px] bg-[#4d61d3] 
+                    rounded-r-[150px] -z-10">
+        </div>
+        <img 
+          src="assets/img/illustration-features-tab-2.svg" 
+          alt="Speedy Searching"
+          class="max-w-[500px] w-full rounded-[20px]"
+        >
+      </div>
+      <div class="feature-text w-full md:w-1/2 flex flex-col gap-4">
+        <h3 class="text-[2rem] text-[#2a2e4c]">Intelligent Search</h3>
+        <p class="text-[1.2rem] text-[#94959a]">
+          Our powerful search feature will help you find saved sites in no time at all. 
+          No need to crawl through all of your bookmarks.
+        </p>
+        <button 
+          class="inline-block font-medium text-[0.95rem] py-3 px-6 rounded 
+                 cursor-pointer transition-all border-none bg-[#4d61d3] text-white
+                 shadow-[0_8px_16px_rgba(82,103,223,0.2)]
+                 hover:bg-white hover:text-[#4d61d3] 
+                 hover:border-2 hover:border-[#4d61d3]
+                 w-fit"
+        >
+          More Info
+        </button>
+      </div>
+    </div>
+
+    <!-- Feature 3 (por defecto oculto) -->
+    <div id="feature-sharing" class="feature hidden items-center justify-between py-12 px-[10%] gap-12 w-full
+                                   md:flex-row flex-col
+                                   relative">
+      <div class="feature-image w-full md:w-1/2 relative flex justify-center mb-8 md:mb-0">
+        <div class="hidden md:block absolute top-1/3 right-[40%] w-[120%] h-[320px] bg-[#4d61d3] 
+                    rounded-r-[150px] -z-10">
+        </div>
+        <img 
+          src="assets/img/illustration-features-tab-3.svg" 
+          alt="Easy Sharing"
+          class="max-w-[500px] w-full rounded-[20px]"
+        >
+      </div>
+      <div class="feature-text w-full md:w-1/2 flex flex-col gap-4">
+        <h3 class="text-[2rem] text-[#2a2e4c]">Share your bookmarks</h3>
+        <p class="text-[1.2rem] text-[#94959a]">
+          Easily share your bookmarks and collections with others. 
+          Create a shareable link that you can send at the click of a button.
+        </p>
+        <button 
+          class="inline-block font-medium text-[0.95rem] py-3 px-6 rounded 
+                 cursor-pointer transition-all border-none bg-[#4d61d3] text-white
+                 shadow-[0_8px_16px_rgba(82,103,223,0.2)]
+                 hover:bg-white hover:text-[#4d61d3] 
+                 hover:border-2 hover:border-[#4d61d3]
+                 w-fit"
+        >
+          More Info
+        </button>
       </div>
     </div>
   </div>
