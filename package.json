@@ -7,6 +7,6 @@
     "tailwindcss": "^3.4.1"
   },
   "scripts": {
-    "build:css": "postcss styles/main.css -o public/styles.css"
+    "build:css": "postcss styles/main.css -o assets/css/main.css"
   }
 }

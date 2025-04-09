@@ -1,6 +1,0 @@
-body {
-  @apply text-[--color-text-dark] bg-white;
-}
-img {
-  @apply max-w-full h-auto;
-}

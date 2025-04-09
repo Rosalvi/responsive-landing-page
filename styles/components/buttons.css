@@ -1,6 +1,0 @@
-.btn-blue {
-  @apply bg-[--color-primary] text-white font-medium text-sm px-6 py-3 rounded cursor-pointer transition-all shadow-md border border-transparent hover:bg-white hover:text-[--color-primary] hover:border-[--color-primary];
-}
-.btn-white {
-  @apply bg-[--color-bg-light] text-gray-500 font-medium text-sm px-6 py-3 rounded cursor-pointer transition-all shadow-md hover:bg-white hover:text-gray-600 hover:border-gray-600;
-}
