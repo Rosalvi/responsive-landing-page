@@ -1,0 +1,23 @@
+@media (max-width: 768px) {
+  .hero-container {
+    @apply flex-col-reverse text-center px-5;
+  }
+  .hero-left, .hero-right {
+    @apply w-full text-center items-center px-[10%];
+  }
+  .hero-left h1 {
+    @apply text-[2.5rem];
+  }
+  .hero-left p {
+    @apply text-[1.2rem];
+  }
+  .image-container img {
+    @apply w-full h-auto;
+  }
+  .features-initial p {
+    @apply px-0;
+  }
+  .features-nav {
+    @apply flex-col relative;
+  }
+}

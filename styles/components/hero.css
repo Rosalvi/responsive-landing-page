@@ -1,0 +1,21 @@
+.hero-container {
+  @apply flex justify-between items-center min-h-[50vh] overflow-hidden;
+}
+.hero-left {
+  @apply w-1/2 px-[10%] flex flex-col gap-5;
+}
+.hero-left h1 {
+  @apply text-[4rem] text-[--color-text-dark];
+}
+.hero-left p {
+  @apply text-[1.4rem] text-[--color-text-light];
+}
+.hero-right {
+  @apply w-1/2 flex justify-center;
+}
+.image-container {
+  @apply relative w-full max-w-[600px] h-[500px];
+}
+.image-container img {
+  @apply w-[650px] rounded-[20px];
+}

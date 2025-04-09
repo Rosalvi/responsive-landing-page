@@ -1,4 +1,12 @@
-{"scripts": {
-  "sass": "sass --watch assets/sass/main.scss:assets/css/main.css --style compressed"
-}
+{
+  "devDependencies": {
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.4.31",
+    "postcss-cli": "^8.3.1",
+    "postcss-import": "^15.1.0",
+    "tailwindcss": "^3.4.1"
+  },
+  "scripts": {
+    "build:css": "postcss styles/main.css -o public/styles.css"
+  }
 }
