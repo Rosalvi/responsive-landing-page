@@ -19,6 +19,9 @@ document.addEventListener("DOMContentLoaded", () => {
     loadComponent("header-container", "components/header.html", initializeMenu);
     loadComponent("hero-container", "components/hero-section.html");
     loadComponent("features-container", "components/features.html", initializeFeaturesTabs);
+    loadComponent("download-extension", "components/download-extension.html");
+    loadComponent("faq-container", "components/faq.html");
+    loadComponent("contact-info", "components/contact-info.html");
 
     function initializeMenu() {
         const menuBtn = document.getElementById("menu-toggle");
@@ -38,26 +41,27 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 function initializeFeaturesTabs() {
-const tabs = document.querySelectorAll('.feature-tab');
-const features = document.querySelectorAll('.feature');
+    const tabs = document.querySelectorAll('.feature-tab');
+    const features = document.querySelectorAll('.feature');
+  
+    tabs.forEach((tab, idx) => {
+      tab.addEventListener('click', () => {
+        tabs.forEach(btn => {
+          btn.classList.remove('border-[#fb575b]', 'border-b-4', 'text-black');
+          btn.classList.add('border-transparent', 'text-[#94959a]');
+        });
+        features.forEach(f => {
+          f.classList.add('hidden');
+          f.classList.remove('flex');
+        });
+  
 
-tabs.forEach((tab, idx) => {
-  tab.addEventListener('click', () => {
-    // Quitar estilos en todos
-    tabs.forEach(btn => {
-      btn.classList.remove('border-[#fb575b]', 'border-b-4', 'text-black');
-      btn.classList.add('border-transparent', 'text-[#94959a]');
+        tab.classList.remove('text-[#94959a]', 'border-transparent');
+        tab.classList.add('border-[#fb575b]', 'border-b-4', 'text-black');
+        
+        features[idx].classList.remove('hidden');
+        features[idx].classList.add('flex');
+      });
     });
-    features.forEach(f => {
-      f.classList.add('hidden');
-      f.classList.remove('flex');
-    });
-
-    // Activar sólo en el tab y feature correspondiente
-    tab.classList.remove('text-[#94959a]', 'border-transparent');
-    tab.classList.add('border-[#fb575b]', 'border-b-4', 'text-black');
-    features[idx].classList.remove('hidden');
-    features[idx].classList.add('flex');
-  });
-});
   }
+  
