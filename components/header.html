@@ -1,0 +1,30 @@
+<header class="bg-white text-black w-full px-5 py-4 relative z-50">
+    <div class="container mx-auto flex justify-between items-center py-6">
+      <div class="logo flex items-center">
+        <img src="assets/img/logo-bookmark.svg" alt="Logo" class="w-[177.6px] h-[30px] mr-10" />
+      </div>
+      <div class="nav-container flex items-center">
+        <button id="menu-toggle" class="hamburger-menu md:hidden flex flex-col justify-between w-[30px] h-[25px] cursor-pointer z-[60]">
+          <span class="h-1 w-full bg-black rounded origin-center transition-transform"></span>
+          <span class="h-1 w-full bg-black rounded origin-center transition-opacity"></span>
+          <span class="h-1 w-full bg-black rounded origin-center transition-transform"></span>
+        </button>
+        <div id="mobile-menu" class="fixed top-0 left-0 w-full h-full bg-blue-900 bg-opacity-95 hidden flex-col justify-center items-center gap-6 text-white text-xl z-50">
+          <a href="#" class="hover:underline">FEATURES</a>
+          <a href="#" class="hover:underline">PRICING</a>
+          <a href="#" class="hover:underline">CONTACT</a>
+          <button class="bg-[#fb575b] px-6 py-2 rounded hover:bg-white hover:text-[#fb575b] hover:border-2 border-[#fb575b]">LOGIN</button>
+        </div>
+        <ul class="nav-links hidden md:flex md:flex-row gap-5 text-black text-[1rem] font-medium uppercase items-center">
+          <li><a href="#" class="hover:text-[#ff9800] transition">FEATURES</a></li>
+          <li><a href="#" class="hover:text-[#ff9800] transition">PRICING</a></li>
+          <li><a href="#" class="hover:text-[#ff9800] transition">CONTACT</a></li>
+          <li>
+            <button class="login-btn bg-[#fb575b] text-white text-[1rem] font-medium px-5 py-2 shadow-md rounded-md hover:bg-white hover:text-[#fb575b] hover:border-2 border-[#fb575b] transition">
+              LOGIN
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </header>

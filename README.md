@@ -37,4 +37,4 @@ Este proyecto ofrece tres versiones diferentes, cada una utilizando distintas te
    
 3. Abrir en el navegador 
 
-Después de clonar el proyecto y de instalar las dependencias (si corresponde), abre el archivo index.html en tu navegador para ver la página en acción.
+Después de clonar el proyecto y de instalar las dependencias (si corresponde), abre el archivo index.html en tu navegador para ver la página en acción, para esto en la raiz del archivo corre el comando python3 -m http.server 8000
