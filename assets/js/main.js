@@ -22,6 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
     loadComponent("download-extension", "components/download-extension.html");
     loadComponent("faq-container", "components/faq.html");
     loadComponent("contact-info", "components/contact-info.html");
+    loadComponent("footer-container", "components/footer.html");
 
     function initializeMenu() {
         const menuBtn = document.getElementById("menu-toggle");
